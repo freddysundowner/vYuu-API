@@ -18,6 +18,7 @@ const postSchema = new Schema(
      },
      likes:{
         type: Array,
+        default:[]
      },
     userId: {
       type: Schema.Types.ObjectId,
