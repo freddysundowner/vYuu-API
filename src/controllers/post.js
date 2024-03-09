@@ -103,9 +103,10 @@ exports.getAllPosts= async (req, res) => {
   }
 };
 exports.deletePostById = async (req, res) => {
-
+  
     try {
-      let deleted = await postModel.findOneAndRemove(req.params.id);
+      let deleted = await postModel.findByIdAndDelete(req.params.postId);
+      console.log(deleted);
       res
         .status(200)
         .setHeader("Content-Type", "application/json")
