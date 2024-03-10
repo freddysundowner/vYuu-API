@@ -19,13 +19,15 @@ const flutterWaveRouter = require("./flutterwave");
 const importRouter = require("./import");
 const auctionRouter = require("./auction");
 const stripeRouter = require("./stripeRoute");
+const postRouter=require("./postRoute");
 
 const passport = require("passport");
-
+let app = require("../../app");
+ 
 require("../services/authenticate");
 module.exports = app = express();
 
-app.use("/", authRouter);
+app.use("/", authRouter); 
 app.use("/users", userRouter);
 app.use(
   "/orders",
@@ -42,6 +44,7 @@ app.use("/flutterwave", flutterWaveRouter);
 app.use("/favorite", favoriteRouter);
 app.use("/auction", auctionRouter);
 app.use("/stripe", stripeRouter);
+app.use("/post",postRouter);
 app.use(
   "/address",
   passport.authenticate("jwt", { session: false }),

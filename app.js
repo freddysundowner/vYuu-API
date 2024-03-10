@@ -36,7 +36,7 @@ app.use("/public/img", express.static(path.join(__dirname, "public/img")));
  *****************/
 var server = http.createServer(app);
 
-server.listen(process.env.PORT, function () {
+server.listen(process.env.PORT,"192.168.0.100", function () {
   _createSuperAdmin();
   console.log("171006vyuu server listening on port " + process.env.PORT);
 });
