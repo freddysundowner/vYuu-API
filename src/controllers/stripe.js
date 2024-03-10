@@ -253,7 +253,7 @@ exports.connect = async (req, res) => {
     },
     email: email,
     business_type: "individual",
-    business_profile: { url: "www.google.com", mcc: "5734" },
+    business_profile: { url: "https://.google.com", mcc: "5734" },
     tos_acceptance: {
       date: Math.floor(Date.now() / 1000),
       ip: "120.0.0.1",

@@ -38,7 +38,7 @@ var server = http.createServer(app);
 
 server.listen(process.env.PORT, function () {
   _createSuperAdmin();
-  console.log("Tokshop server listening on port " + process.env.PORT);
+  console.log("171006vyuu server listening on port " + process.env.PORT);
 });
 
 _createSuperAdmin = async () => {
